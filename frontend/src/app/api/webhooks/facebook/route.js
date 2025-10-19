@@ -1,6 +1,6 @@
 // app/api/webhooks/facebook/route.js
 const { NextRequest, NextResponse } = require('next/server');
-const { verifyWebhook } = require('@/lib/facebook');
+const { verifyWebhook } = require('./src/lib/facebook');
 const { getLastPostId, updateLastPostId, getMonitoredItems } = require('@/data/store');
 const axios = require('axios');
 
