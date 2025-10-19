@@ -18,8 +18,8 @@ EXPOSE 5000
 
 # Set environment variables (can be overridden in docker-compose or at runtime)
 ENV FB_VERIFY_TOKEN=cyborgtriggerwebhook
-ENV N8N_WEBHOOK_URL=https://data.tcon.app/webhook-test/c2d6e127-140d-4c65-9c0d-f9dc3273d63d
-ENV FB_APP_SECRET=9c28cd7f53849e3da404672dd1957e25
+ENV N8N_WEBHOOK_URL=https://data.tcon.app/webhook/c2d6e127-140d-4c65-9c0d-f9dc3273d63d
+ENV FB_APP_SECRET=95df4b45f097cca983d6f065f3700c75
 
 # Command to run the Flask app
 CMD ["python", "app.py"]

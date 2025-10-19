@@ -7,9 +7,9 @@ import os
 app = Flask(__name__)
 
 # Configuration - Replace with your values
-FB_VERIFY_TOKEN = os.getenv('FB_VERIFY_TOKEN', 'cyborgtriggerwebhook')  # Set in environment or replace
-N8N_WEBHOOK_URL = os.getenv('N8N_WEBHOOK_URL', 'https://data.tcon.app/webhook-test/c2d6e127-140d-4c65-9c0d-f9dc3273d63d')  # n8n webhook URL
-FB_APP_SECRET = os.getenv('FB_APP_SECRET', '9c28cd7f53849e3da404672dd1957e25')  # For signature validation
+FB_VERIFY_TOKEN = os.getenv('FB_VERIFY_TOKEN')  # Set in environment or replace
+N8N_WEBHOOK_URL = os.getenv('N8N_WEBHOOK_URL')  # n8n webhook URL
+FB_APP_SECRET = os.getenv('FB_APP_SECRET')  # For signature validation
 
 # Webhook verification endpoint for Facebook
 @app.route('/webhook', methods=['GET'])

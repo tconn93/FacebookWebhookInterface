@@ -26,26 +26,21 @@ def create_hmac_sha256(payload, app_secret):
 
 # Example usage:
 my_payload = '''{
-  "entry": [
-    {
-      "time": 1520383571,
-      "changes": [
-        {
-          "field": "photos",
-          "value":
-            {
-              "verb": "update",
-              "object_id": "10211885744794461"
-            }
-        }
-      ],
-      "id": "10210299214172187",
-      "uid": "10210299214172187"
+  "field": "feed",
+  "value": {
+    "item": "status",
+    "post_id": "44444444_444444444",
+    "verb": "add",
+    "published": 1,
+    "created_time": 1760347839,
+    "message": "Example post content.",
+    "from": {
+      "name": "Test Page",
+      "id": "1067280970047460"
     }
-  ],
-  "object": "user"
+  }
 }'''
-my_app_secret = '9c28cd7f53849e3da404672dd1957e25'
+my_app_secret = '95df4b45f097cca983d6f065f3700c75'
 
 sha256_signature = create_hmac_sha256(my_payload, my_app_secret)
 print(f"HMAC SHA256 Signature: {sha256_signature}")
