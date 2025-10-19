@@ -1,6 +1,6 @@
 'use client';
 const { useEffect, useState } = require('react');
-const { getMonitoredItems, setWebhookUrl } = require('@/data/store');
+import { getMonitoredItems, setWebhookUrl } from '@/data/store';
 
 
 export default function Home() {

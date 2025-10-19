@@ -1,7 +1,7 @@
 // app/api/subscribe/page/[pageId]/route.js
 const { NextRequest, NextResponse } = require('next/server');
-const { getPageAccessToken, subscribeToPage } = require('@/lib/facebook');
-const { setWebhookUrl } = require('@/data/store');
+import { getPageAccessToken, subscribeToPage } from '@/lib/facebook';
+import { setWebhookUrl } from '@/data/store';
 
 exports.POST = async function (request, { params }) {
   const { pageId } = params;

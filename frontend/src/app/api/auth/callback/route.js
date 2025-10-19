@@ -1,6 +1,6 @@
 // app/api/auth/callback/route.js
 const { NextRequest, NextResponse } = require('next/server');
-const { getUserAccessToken } = require('@/lib/facebook');
+import { getUserAccessToken } from '@/lib/facebook';
 const axios = require('axios');
 
 exports.GET = async function (request) {

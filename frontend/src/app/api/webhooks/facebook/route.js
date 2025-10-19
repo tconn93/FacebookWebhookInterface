@@ -1,7 +1,7 @@
 // app/api/webhooks/facebook/route.js
 const { NextRequest, NextResponse } = require('next/server');
-const { verifyWebhook } = require('@/lib/facebook');
-const { getLastPostId, updateLastPostId, getMonitoredItems } = require('@/data/store');
+import { verifyWebhook } from '@/lib/facebook';
+import { getLastPostId, updateLastPostId, getMonitoredItems } from '@/data/store';
 const axios = require('axios');
 
 exports.GET = async function (request) {

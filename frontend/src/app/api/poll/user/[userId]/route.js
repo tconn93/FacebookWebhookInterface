@@ -1,7 +1,7 @@
 // app/api/poll/user/[userId]/route.js
 const { NextRequest, NextResponse } = require('next/server');
-const { getUserPosts } = require('@/lib/facebook');
-const { getLastPostId, updateLastPostId, getMonitoredItems } = require('@/data/store');
+import { getUserPosts } from '@/lib/facebook';
+import { getLastPostId, updateLastPostId, getMonitoredItems } from '@/data/store';
 const axios = require('axios');
 
 exports.GET = async function (request, { params }) {
